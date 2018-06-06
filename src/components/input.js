@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Input = ({title, state, name}, onChange, index) => {
+import Header from './header';
+import Card from './card';
+
+class Home extends Component {
+  render() {
     return (
-        <div key={index} className="input">
-            <label className="input__number">{index + 1}</label>
-            <input name={name} value={state} onChange={onChange}/>
-            <label className="input__title">{title}</label>
-        </div>
-    )
+      <div className="home">
+        { Header() }
+        <Card />
+      </div>
+    );
+  }
 }
 
-export default Input;
+// things we need to fix
+
+// content labels
+// generate btn space/card-height
+
+export default Home;
